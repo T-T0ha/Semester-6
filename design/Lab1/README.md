@@ -31,6 +31,7 @@ Setup Instructions
 Clone the Repository:
 
 git clone https://github.com/T-T0ha/Semester-6.git
+
 cd design/Lab1
 
 Import the Project into IntelliJ IDEA:
