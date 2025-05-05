@@ -15,6 +15,9 @@ public class RoleService {
     }
 
     public UUID createRole(String roleName) {
+        if (roleName == null || roleName.isBlank()) {
+            throw new IllegalArgumentException("Role name cannot be blank");
+        }
         Role role = new Role(roleName);
         return roleRepository.save(role).getId();
     }

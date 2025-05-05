@@ -18,6 +18,12 @@ public class UserService {
     }
 
     public UUID createUser(String name, String email) {
+        if (name == null || name.isBlank()) {
+            throw new IllegalArgumentException("Name cannot be blank");
+        }
+        if (email == null || !email.matches("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
+            throw new IllegalArgumentException("Invalid email format");
+        }
         User user = new User(name, email);
         return userRepository.save(user).getId();
     }
