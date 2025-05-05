@@ -94,7 +94,7 @@ Ensure the `pom.xml` includes the necessary dependencies:
 
 1. Open `http://localhost:8080/h2-console`.
 2. Use the following settings:
-   - **JDBC URL**: `jdbc:h2:mem:usermanagement`
+   - **JDBC URL**: `dbc:h2:mem:testdb`
    - **Username**: `sa`
    - **Password**: `password`
 3. Click `Connect` to view the database.
